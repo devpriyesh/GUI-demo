@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -51,6 +52,23 @@
                   <ComboBox fx:id="comboBox" prefWidth="150.0" />
                   <Button mnemonicParsing="false" onAction="#comboBoxPushed" text="OK!" />
                   <Label fx:id="comboBoxLabel" text="Label" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="-1.0" layoutY="261.0" prefHeight="235.0" prefWidth="720.0">
+         <children>
+            <VBox prefHeight="235.0" prefWidth="231.0" spacing="10.0">
+               <children>
+                  <Label text="Radio Button">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radioGeorgian" mnemonicParsing="false" onAction="#radioPushed" text="Georgian College" />
+                  <RadioButton fx:id="radioSeneca" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#radioPushed" text="Seneca College" />
+                  <RadioButton fx:id="radioHumber" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#radioPushed" text="Humber College" />
+                  <Label fx:id="radioButtonLabel" text="Label" />
                </children>
             </VBox>
          </children>

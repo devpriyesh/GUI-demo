@@ -14,6 +14,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 
 /**
  *
@@ -81,6 +83,33 @@ public class FXMLDocumentController implements Initializable {
        comboBoxLabel.setText("Fav Country : \n" + comboBox.getValue().toString() );
     }
     
+    // code here goes for radio button
+    @FXML
+    private RadioButton radioGeorgian;
+
+    @FXML
+    private RadioButton radioSeneca;
+
+    @FXML
+    private RadioButton radioHumber;
+
+    @FXML
+    private Label radioButtonLabel;
+    
+    private ToggleGroup favCollege;
+    
+    @FXML
+    void radioPushed(ActionEvent event) {
+       if(this.favCollege.getSelectedToggle().equals(this.radioGeorgian))
+           radioButtonLabel.setText("Fav College is Georgian");
+       
+       if(this.favCollege.getSelectedToggle().equals(this.radioHumber))
+           radioButtonLabel.setText("Fav College is Humber");
+       
+       if(this.favCollege.getSelectedToggle().equals(this.radioSeneca))
+           radioButtonLabel.setText("Fav college is Seneca");
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -98,6 +127,14 @@ public class FXMLDocumentController implements Initializable {
         comboBoxLabel.setText("");
         comboBox.getItems().addAll("India" , "Canada" , "USA" , "China" , "South Africa" , "New Zealand");
         comboBox.setValue("India");
+        
+        // code here goes for radio button
+        radioButtonLabel.setText("");
+        favCollege = new ToggleGroup() ;
+        this.radioHumber.setToggleGroup(favCollege);
+        this.radioSeneca.setToggleGroup(favCollege);
+        this.radioGeorgian.setToggleGroup(favCollege);
+        
     }    
     
 }
