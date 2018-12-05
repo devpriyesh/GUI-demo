@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
 /**
@@ -68,6 +69,18 @@ public class FXMLDocumentController implements Initializable {
     }
 
     
+    // code here goes for combo box
+    @FXML
+    private ComboBox comboBox;
+
+    @FXML
+    private Label comboBoxLabel;
+    
+    @FXML
+    void comboBoxPushed(ActionEvent event) {
+       comboBoxLabel.setText("Fav Country : \n" + comboBox.getValue().toString() );
+    }
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -80,6 +93,11 @@ public class FXMLDocumentController implements Initializable {
         choiceBox.getItems().add("Cricket");
         choiceBox.getItems().addAll("Tennis" , "Hockey");
         choiceBox.setValue("Tennis");
+        
+        // code here goes for combo box
+        comboBoxLabel.setText("");
+        comboBox.getItems().addAll("India" , "Canada" , "USA" , "China" , "South Africa" , "New Zealand");
+        comboBox.setValue("India");
     }    
     
 }
