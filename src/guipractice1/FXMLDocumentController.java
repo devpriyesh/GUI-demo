@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
 /**
@@ -19,6 +20,9 @@ import javafx.scene.control.Label;
  */
 public class FXMLDocumentController implements Initializable {
     
+    
+    
+    // code here goes for check box
      @FXML
     private CheckBox checkBoxPizza;
 
@@ -51,12 +55,31 @@ public class FXMLDocumentController implements Initializable {
     }
     
     
+    // code here goes for choice box
+    @FXML
+    private ChoiceBox choiceBox;
+
+    @FXML
+    private Label choiceBoxLabel;
+    
+    @FXML
+    void choiceBoxPushed(ActionEvent event) {
+         choiceBoxLabel.setText("Fav sport is \n" + choiceBox.getValue().toString());
+    }
+
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
         // code here goes for check box
         CheckBoxLabel.setText("");
+        
+        // code here goes for choice box
+        choiceBoxLabel.setText("");
+        choiceBox.getItems().add("Cricket");
+        choiceBox.getItems().addAll("Tennis" , "Hockey");
+        choiceBox.setValue("Tennis");
     }    
     
 }
