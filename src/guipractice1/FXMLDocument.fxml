@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="497.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="guipractice1.FXMLDocumentController">
+   <children>
+      <HBox layoutX="1.0" layoutY="2.0" prefHeight="251.0" prefWidth="719.0">
+         <children>
+            <VBox prefHeight="251.0" prefWidth="221.0" spacing="10.0">
+               <children>
+                  <Label text="Check Box">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="checkBoxPizza" mnemonicParsing="false" text="Pizza" />
+                  <CheckBox fx:id="checkBoxBurger" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Burger" />
+                  <CheckBox fx:id="checkBoxBurrito" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Burrito" />
+                  <CheckBox fx:id="checkBoxSub" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" text="Sub" />
+                  <Button mnemonicParsing="false" onAction="#checkBoxPushed" text="Order !" />
+                  <Label fx:id="CheckBoxLabel" layoutX="10.0" layoutY="10.0" text="Label" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="251.0" prefWidth="221.0" />
+            <VBox layoutX="110.0" layoutY="10.0" prefHeight="251.0" prefWidth="226.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
